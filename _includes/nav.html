@@ -1,18 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse justify-content-center navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item"> <!-- Add active on current page -->
-          <a class="nav-link text-center" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-center" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-center" href="#">Projects</a>
-        </li>
+        {% for iterate_page in site.html_pages %}
+          {% if iterate_page.title == 404 %}
+          {% else if iterate_page.title == page.title %}
+          <li>
+            <a class="nav-link text-center active" href="{{ iterate_page.url | relative_url }}">{{ iterate_page.title | escape }}</a>
+          </li>
+          {% else %}
+          <li>
+            <a class="nav-link text-center" href="{{ iterate_page.url | relative_url }}">{{ iterate_page.title | escape }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
   </nav>
