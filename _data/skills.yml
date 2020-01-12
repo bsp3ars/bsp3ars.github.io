@@ -1,0 +1,32 @@
+- fa-icon: fab fa-html5
+  text: HTML 5
+
+- fa-icon: fab fa-css3-alt
+  text: CSS 3
+
+- fa-icon: fab fa-js
+  text: JavaScript
+
+- fa-icon: fab fa-java
+  text: Java
+
+- fa-icon: fab fa-python
+  text: Python
+  
+- fa-icon: fab fa-github
+  text: GitHub
+
+- fa-icon: fas fa-database
+  text: SQL
+
+- fa-icon: fab fa-linux
+  text: Linux
+
+- fa-icon: fab fa-docker
+  text: Docker
+
+- fa-icon: fab fa-android
+  text: Android Development
+
+- fa-icon: fas fa-plus
+  text: And much more!

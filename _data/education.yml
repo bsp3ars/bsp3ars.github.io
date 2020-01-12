@@ -1,0 +1,19 @@
+- name: University of Cincinnati
+  img: uc_logo.jpg
+  degree: Bachelor of Science, Majoring in Computer Science
+  gpa: 3.1
+
+- name: Sinclair Community College
+  img: scc_logo.jpg
+  degree: Associate of Applied Science, Software Development
+  gpa: 3.8
+
+- name: Miami Valley Career Technology Center
+  img: mvctc_logo.jpg
+  degree: Game Programming and Web Applications Program
+  gpa: 3.9
+
+- name: Tippecanoe High School
+  img: ths_logo.jpg
+  degree: Technical Honors Diploma
+  gpa: 3.7

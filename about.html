@@ -1,0 +1,56 @@
+---
+layout: default
+title: About
+---
+
+<!-- Quick Bio -->
+
+<div class="container">
+    <div class="row my-4 justify-content-center">
+        <div class="col-lg-6">
+            <img class="img-fluid rounded" src="assets/images/face_shot.jpg" alt="head shot">
+        </div>
+        <div class="col-lg-6 align-items-center d-flex">
+            <div class="container">
+                <h2 class="text-center my-4">About Me</h2>
+                <span >I am currently a third year computer science student at the University of Cincinnati. I enjoy learning new things in my free time, and expanding what I already know. I have co-oped over several semesters and was able to work closely with several developers on a variety of projects. I also have a lot of experience with online code repositories, and I love to contribute as much as I can. I am currently looking for my next co-op opportunity, so please contact me with any positions that are available.</span>
+            </div>
+        </div>
+      </div>
+</div>
+
+<!-- Education -->
+
+<div class="container">
+    <h2 class="text-center my-4">Education</h2>
+    <div class="card-deck">
+        {% for school in site.data.education %}
+        <div class="card col-lg-3">
+            <img class="card-img-top" src="assets/images/{{ school.img }}" alt="{{ school.name }}">
+            <div class="card-body text-center">
+                <h4 class="card-title">{{ school.name }}</h4>
+                <p class="card-text">{{ school.degree }}</p>
+                <p class="card-text">{{ school.gpa }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Skills -->
+
+<div class="container mt-4 mb-5" style="">
+    <h2 class="text-center">Skills</h2>
+    <div class="container card-group">
+        {% for skill in site.data.skills %}
+        <div class="card-body">
+            <div class="row">
+                <i class="{{ skill.fa-icon }} mx-auto" style="font-size: 5em"></i>
+            </div>
+            <div class="row mx-auto">
+                <p class="mx-auto text-center">{{ skill.text }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

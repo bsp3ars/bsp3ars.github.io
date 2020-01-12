@@ -25,7 +25,6 @@ repository: "bsp3ars/bsp3ars.github.io"
 
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
 
 # A list of the pages to display in the navigation bar

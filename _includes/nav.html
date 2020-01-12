@@ -4,15 +4,15 @@
     </button>
     <div class="collapse justify-content-center navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
+        <li>
+          <a class="nav-link text-center" href="/">Home</a>
+        </li>
         {% for iterate_page in site.html_pages %}
-          {% if iterate_page.title == 404 %}
-          {% else if iterate_page.title == page.title %}
-          <li>
-            <a class="nav-link text-center active" href="{{ iterate_page.url | relative_url }}">{{ iterate_page.title | escape }}</a>
-          </li>
+          {% if iterate_page.url == "/" %}
+          {% elsif iterate_page.title == 404 %}
           {% else %}
           <li>
-            <a class="nav-link text-center" href="{{ iterate_page.url | relative_url }}">{{ iterate_page.title | escape }}</a>
+            <a class="nav-link text-center" href="{{ iterate_page.url | relative_url }}">{{ iterate_page.title }}</a>
           </li>
           {% endif %}
         {% endfor %}
